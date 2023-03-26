@@ -1,16 +1,76 @@
-<html lang="en">
-    <head>
-        <title>Jual Temen Online</title>
-    </head>
-    <body>
-        <h2>Hai Selamat Datang Di Lapak Jual Beli teman</h1>
-        <script>
-            document.write("<hr>");
-            document.write("<p>Lagi Promo Nih Silahkan dibeli</p>");
-            document.write("yuk beli di <a hreff='https://shopee.co.id/Jual-teman-i.189743063.3539191009'Pembelian Onlines<?a>");
-        </script>
-        <hr>
-        <button type="button"
-        onclik="document.write('')">Silahkan Beli</button>
-    </body>
+<!DOCTYPE html>
+<html lang="id">
+       <head>
+       <title>BelajarWeb</title>
+       <link rel="stylesheet" href="style.css">
+        <!--<style>
+            body {
+                background-color: rgb(226, 195, 147);
+            }
+        </style>-->
+       <body >
+        <h1>Belajar Dasar Web</h1>
+        <div class="myheader">
+            <p class="p1">Hai saya sedang belajar Web</p>
+            <p class="p2">Beberapa hal sulit untuk saya pelajari</p>
+        </div>
+        <table border="1">
+            <tr>
+             <th>Nama</th>   
+             <th>Kelas</th>   
+             <th>Umur</th>   
+             <th colspan="2">Aksi</th>  
+             <th rowspan="2"> Lulus </th>  
+            </tr>
+            <tr>
+                <td>Selfi</td>   
+                <td>RPL</td>   
+                <td>18 Tahun</td> 
+                <td>
+                    <button>Show</button>
+                </td> 
+                <td>
+                    <button>Delete</button>
+                </td> 
+                  
+            </tr>
+        </table><br><br>
+        <form>
+            <label>Username</label><br>
+            <input type="text" name="username" class="username_class" id="username_id" autocomplete="off"/><br>
+
+            <label>Password</label><br>
+            <input type="password" name="password" class="password_class" id="password_id" autocomplete="off"/><br>
+            <label>Pilihan Gender</label><br>
+            <input type="radio" name="gender" value="laki-laki"/><label>Laki-Laki</label><br>
+            <input type="radio" name="gender" value="Perempuan"/><label>Perempuan</label><br>
+            
+            <label>Pilihan Agama</label><br>
+            <input type="radio" name="agama" value="islam"/><label>Islam</label><br>
+            <input type="radio" name="agama" value="kristen"/><label>Kristen</label><br>
+            <input type="radio" name="agama" value="katholik"/><label>Katholik</label><br>
+            <input type="radio" name="agama" value="hindu"/><label>Budha</label><br>
+            <input type="radio" name="agama" value="konghucu"/><label>Konghucu</label><br>
+           
+            <label>Pilih Hobi</label><br>
+            <input type="checkbox" name="hobi" value="renang"/><label>Renang</label><br>
+            <input type="checkbox" name="hobi" value="Bulu Tangkis"/><label>Bulu Taangkis</label><br>
+            <input type="checkbox" name="hobi" value="volly"/><label>Volly</label><br>
+            <input type="checkbox" name="hobi" value="pencak silat"/><label>Pencak Silat</label><br>
+            
+            <label>Pilih Negara</label><br>
+            <select name="negara">
+                <option value="Indonesia">Indonesia</option>
+                <option value="Amerika">Amerika</option>
+                <option value="Australia">Australia</option>
+                <option value="Paris">Paris</option>
+            </select>
+            <br>
+            <label>Saran dan Masukan</label><br>
+            <textarea name="Saran" rows="6" cols="50">
+
+            </textarea>
+            <input type="reset"name="reset form"/>
+        </form>
+       </body>
 </html>
