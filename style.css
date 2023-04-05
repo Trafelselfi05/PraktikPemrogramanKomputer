@@ -1,0 +1,23 @@
+body {
+    /*background-color: bisque;*/
+    background-image: url(https://i2.wp.com/www.padamu.net/wp-content/uploads/2017/05/sekolah.jpg?fit=500%2C308&ssl=1);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1 {
+    background-color: rgb(209, 241, 232);
+    color: rgb(69, 14, 14);
+    border: 2px solid turquoise;
+    opacity: 0.3;
+}
+.myheader {
+    color: blue;
+    padding-left: 30px;/*ini untuk jarak dibagian dalam(kiri)*/
+    margin-bottom: 30px;/*ini untuk jarak dibagian luar(bawah)*/
+    padding-top: 10;/*ini untuk jarak dibagian dalam (atas)*/
+
+
+}
+p.p1 {
+    color: black;
+}
