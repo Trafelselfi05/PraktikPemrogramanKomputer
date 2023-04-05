@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+<body>
+  <h1>Program Perhitungan Nilai Mahasiswa</h1>
+  <form>
+    <label for="nama-mahasiswa">Nama Mahasiswa:</label>
+    <input type="text" id="nama-mahasiswa" required />
+    <br /><br />
+    <label for="nim-mahasiswa">NIM Mahasiswa:</label>
+    <input type="text" id="nim-mahasiswa" required />
+    <br /><br />
+    <label for="nilai-tugas">Nilai Tugas:</label>
+    <input type="number" id="nilai-tugas" required />
+    <br /><br />
+    <label for="nilai-uts">Nilai UTS:</label>
+    <input type="number" id="nilai-uts" required />
+    <br /><br />
+    <label for="nilai-uas">Nilai UAS:</label>
+    <input type="number" id="nilai-uas" required />
+    <br /><br />
+    <button type="button" onclick="hitungNilai()">Hitung Nilai</button>
+  </form>
+  <br /><br />
+  <div id="hasil"></div>
+  <script>
+    function hitungNilai() {
+      // Ambil nilai dari form
+      const nama = document.getElementById("nama-mahasiswa").value;
+      const nim = document.getElementById("nim-mahasiswa").value;
+      const nilaiTugas = Number(document.getElementById("nilai-tugas").value);
+      const nilaiUTS = Number(document.getElementById("nilai-uts").value);
+      const nilaiUAS = Number(document.getElementById("nilai-uas").value);
+      
+      // Hitung nilai akhir
+      const nilaiAkhir = (nilaiTugas * 0.3) + (nilaiUTS * 0.3) + (nilaiUAS * 0.4);
+     
+      
+      // Tampilkan hasil
+      const hasilElemen = document.getElementById("hasil");
+      hasilElemen.innerHTML = `<p>Nama Mahasiswa :${nama} <p>NIM : ${nim}</p> <p>Nilai Akhir :${nilaiAkhir}</p>`;
+      if (nilaiAkhir >= 80 && nilaiAkhir <= 100) {
+        hasilElemen.innerHTML += "<p>Grade: A</p>";
+      } else if (nilaiAkhir >= 70 && nilaiAkhir < 80) {
+        hasilElemen.innerHTML += "<p>Grade: B</p>";
+      } else if (nilaiAkhir >= 60 && nilaiAkhir < 70) {
+        hasilElemen.innerHTML += "<p>Grade: C</p>";
+      } else if (nilaiAkhir >= 50 && nilaiAkhir < 60) {
+        hasilElemen.innerHTML += "<p>Grade: D</p>";
+      } else if (nilaiAkhir >= 0 && nilaiAkhir < 50){
+        hasilElemen.innerHTML += "<p>Grade: E</p>";
+      }else {
+          alert("Input nilai tidak valid! Silahkan masukkan nilai antara 0-100.");
+          return;
+      }
+    }
+  </script>
+</body>
+</html>
