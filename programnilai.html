@@ -44,19 +44,19 @@ button {
   <h1>Program Perhitungan Nilai Mahasiswa</h1>
   <form>
     <label for="nama-mahasiswa">Nama Mahasiswa:</label>
-    <input type="text" id="nama-mahasiswa" required/>
+    <input type="text" id="nama-mahasiswa" />
     <br /><br />
     <label for="nim-mahasiswa">NIM Mahasiswa:</label>
-    <input type="text" id="nim-mahasiswa" required/>
+    <input type="text" id="nim-mahasiswa" />
     <br /><br />
     <label for="nilai-tugas">Nilai Tugas:</label>
-    <input type="number" id="nilai-tugas" required />
+    <input type="number" id="nilai-tugas" />
     <br /><br />
     <label for="nilai-uts">Nilai UTS:</label>
-    <input type="number" id="nilai-uts" required/>
+    <input type="number" id="nilai-uts" />
     <br /><br />
     <label for="nilai-uas">Nilai UAS:</label>
-    <input type="number" id="nilai-uas" required/>
+    <input type="number" id="nilai-uas" />
     <br /><br />
     <button type="button" onclick="hitungNilai()">Hitung Nilai</button>
   </form>
@@ -73,7 +73,6 @@ button {
       
       // Hitung nilai akhir
       const nilaiAkhir = (nilaiTugas * 0.3) + (nilaiUTS * 0.3) + (nilaiUAS * 0.4);
-     
       
       // Tampilkan hasil
       const hasilElemen = document.getElementById("hasil");
