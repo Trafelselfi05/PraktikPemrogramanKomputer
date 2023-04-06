@@ -1,0 +1,43 @@
+form {
+    display: grid;
+    grid-template-columns: -2fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  input,
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
