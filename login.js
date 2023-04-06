@@ -9,7 +9,7 @@ formLogin.addEventListener("submit", function(event) {
   const password = document.getElementById("password").value;
   
   // Cek apakah username dan password benar
-  if (username === "admin" && password === "1234") {
+  if (username === "admin" && password === "050904") {
     formLogin.style.display = "none"; // Sembunyikan form log in
     formPenilaian.style.display = "block"; // Tampilkan form penilaian
   } else {
@@ -20,3 +20,4 @@ formLogin.addEventListener("submit", function(event) {
 formPenilaian.addEventListener("submit"), function(event) {
   event.preventDefault(); // Mencegah form penilaian submit secara otomatis
 }
+
