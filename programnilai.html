@@ -56,18 +56,24 @@
           if (nilaiAkhir >= 80 && nilaiAkhir <= 100) {
             hasilElemen.innerHTML += "<p>Grade: A</p>";
             hasilElemen.innerHTML += "<p>Keterangan: Lulus</p>"
+            alert("Nilai Akhir: " + nilaiAkhir + "\nGrade: A\nKeterangan: Lulus");
           } else if (nilaiAkhir >= 70 && nilaiAkhir < 80) {
             hasilElemen.innerHTML += "<p>Grade: B</p>";
             hasilElemen.innerHTML += "<p>Keterangan: Lulus</p>"
+            alert("Nilai Akhir: " + nilaiAkhir + "\nGrade: B\nKeterangan: Lulus");
           } else if (nilaiAkhir >= 60 && nilaiAkhir < 70) {
             hasilElemen.innerHTML += "<p>Grade: C</p>";
             hasilElemen.innerHTML += "<p>Keterangan: Lulus</p>"
+            alert("Nilai Akhir: " + nilaiAkhir + "\nGrade: C\nKeterangan: Lulus");
           } else if (nilaiAkhir >= 50 && nilaiAkhir < 60) {
             hasilElemen.innerHTML += "<p>Grade: D</p>";
             hasilElemen.innerHTML += "<p>Keterangan:Tidak Lulus</p>"
+            alert("Nilai Akhir: " + nilaiAkhir + "\nGrade: D\nKeterangan:Tidak Lulus");
           } else if (nilaiAkhir >= 0 && nilaiAkhir < 50){
             hasilElemen.innerHTML += "<p>Grade: E</p>";
             hasilElemen.innerHTML += "<p>Keterangan:Tidak Lulus</p>"
+            alert("Nilai Akhir: " + nilaiAkhir + "\nGrade: E\nKeterangan: Tidak Lulus");
+
           }else {
               alert("Input nilai tidak valid! Silahkan masukkan nilai antara 0-100.");
               return;
