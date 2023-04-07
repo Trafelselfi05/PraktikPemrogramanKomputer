@@ -16,7 +16,8 @@
 			<option value="ayam-goreng" data-harga="12000">Ayam Goreng</option>
 			<option value="ayam-penyet" data-harga="18000">Ayam Penyet</option>
 		</select><br>
-        
+        <label for="jumlah-makanan">Jumlah</label>
+        <input type="number" id="jumlah-makanan"><br>
 		<label for="harga-makanan">Harga Makanan</label>
 		<input type="number" id="harga-makanan" disabled><br>
 
@@ -26,11 +27,12 @@
 			<option value="jus-jeruk" data-harga="10000">Jus Jeruk</option>
 			<option value="es-kopi" data-harga="8000">Es Kopi</option>
 		</select><br>
-
+        <label for="jumlah-minuman">Jumlah</label>
+        <input type="number" id="jumlah-minuman"><br>
 		<label for="harga-minuman">Harga Minuman</label>
 		<input type="number" id="harga-minuman" disabled><br>
 
-		<label for="uang-tunai">Uang Tunai</label>
+		<label for="uang-tunai">Uang Tunai:</label>
 		<input type="number" id="uang-tunai"><br>
 		<button type="button" onclick="hitungBelanja()">Hitung Belanja</button>
         
@@ -54,8 +56,10 @@
 			var namaPembeli = document.getElementById("nama-pembeli").value;
 			var makanan = document.getElementById("makanan").value;
 			var hargaMakanan = parseInt(document.getElementById("harga-makanan").value);
+            var jumlahMakanan = parseInt(document.getElementById("jumlah-makanan").value);
 			var minuman = document.getElementById("minuman").value;
 			var hargaMinuman = parseInt(document.getElementById("harga-minuman").value);
+            var jumlahMinuman = parseInt(document.getElementById("jumlah-minuman").value);
 			var uangTunai = parseInt(document.getElementById("uang-tunai").value);
 
             // periksa apakah ada input yang kosong
@@ -65,17 +69,17 @@
             }
 
 			// Hitung total harga
-			var totalHarga = hargaMakanan + hargaMinuman;
+			var totalHarga = hargaMakanan * jumlahMakanan + hargaMinuman;
 
 			// Hitung kembalian
 			var kembalian = uangTunai - totalHarga;
 
            	// Menampilkan output belanja
             alert(`
-            Output Belanja
+            Catatan Belanja
             Nama Pembeli: ${namaPembeli}
-            Makanan: ${makanan} (Harga: ${hargaMakanan} Rupiah)
-            Minuman: ${minuman} (Harga: ${hargaMinuman} Rupiah)
+            Makanan: ${makanan} (Harga: ${hargaMakanan} Rupiah x ${jumlahMakanan})
+            Minuman: ${minuman} (Harga: ${hargaMinuman} Rupiah x ${jumlahMinuman})
             Total Harga: ${totalHarga} Rupiah
             Uang Tunai: ${uangTunai} Rupiah
             Kembalian: ${kembalian} Rupiah
