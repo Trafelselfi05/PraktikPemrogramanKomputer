@@ -1,15 +1,18 @@
 
 body {
-  background-color: bisque;
+  background-color: rgb(255, 255, 255);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 form {
+    background-color: bisque;
     display: grid;
     grid-template-columns: -2fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+    grid-gap: 10px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }

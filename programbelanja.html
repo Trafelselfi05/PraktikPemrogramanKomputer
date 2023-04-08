@@ -13,6 +13,7 @@
 
 		<label for="makanan">Makanan</label>
 		<select id="makanan" onchange="setHargaMakanan()">
+			<option value="" disabled selected>Pilih Makanan</option>
 			<option value="ayam-geprek" data-harga="15000">Ayam Geprek</option>
 			<option value="ayam-goreng" data-harga="12000">Ayam Goreng</option>
 			<option value="ayam-penyet" data-harga="18000">Ayam Penyet</option>
@@ -24,6 +25,7 @@
 
 		<label for="minuman">Minuman</label>
 		<select id="minuman" onchange="setHargaMinuman()">
+			<option value="" disabled selected>Pilihan Minuman</option>
 			<option value="teh-manis" data-harga="5000">Teh Manis</option>
 			<option value="jus-jeruk" data-harga="10000">Jus Jeruk</option>
 			<option value="es-kopi" data-harga="8000">Es Kopi</option>
@@ -42,6 +44,9 @@
 	<div id="output"></div>
 
 	<script>
+			// membuat opsi pertama terpilih secara default
+			document.getElementById("makanan").selectedIndex = 0;
+			document.getElementById("minuman").selectedIndex = 0
 		function setHargaMakanan() {
 			var hargaMakanan = document.getElementById("makanan").options[document.getElementById("makanan").selectedIndex].dataset.harga;
 			document.getElementById("harga-makanan").value = hargaMakanan;
