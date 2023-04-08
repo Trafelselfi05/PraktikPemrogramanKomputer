@@ -1,5 +1,11 @@
+
+body {
+  background-image: url("https://lh5.googleusercontent.com/proxy/juRIZxCFwH4mT8HX0_4wzsnPafuDe3ddzD0Ctznbzc9Kqcdn_Z4hsJpEp9Z_M6UsWLM5uN6pz_1pV7MOZV2Qydf1wBrXdfcTdRPuL3FHI7bxeE4m18ITKFk1il8KAjo46AqADs7NyOBsAp6rMtfXWjhT8ldqbf5AFM53iTy__Zi9NaMAv-JBkhhZxQehHBXk_2i92WVhyaFNxskE0tjunWSSJQ=w1200-h630-p-k-no-nu");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 form {
-    background-color: bisque;
     display: grid;
     grid-template-columns: -2fr 1fr;
     grid-gap: 20px;
