@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div style="text-align: center;">
-	<h3>Program Belanja</h3>
+	<h3>Program Ayam Kampus Geprek</h3>
 	<form>
 		<label for="nama-pembeli">Nama Pembeli</label>
 		<input type="text" id="nama-pembeli"><br>
@@ -38,7 +38,8 @@
 		<label for="uang-tunai">Uang Tunai:</label>
 		<input type="number" id="uang-tunai"><br>
 		<button type="button" onclick="hitungBelanja()">Hitung Belanja</button>
-        
+        <button type="button" onclick="tampilTotalHarga()">Total Harga</button>
+		<div id="total-harga"></div>
 	</form>
 
 	<div id="output"></div>
@@ -68,6 +69,12 @@
             var jumlahMinuman = parseInt(document.getElementById("jumlah-minuman").value);
 			var uangTunai = parseInt(document.getElementById("uang-tunai").value);
 
+			//tambahan event listener untuk tombol tampilkan total harga
+			var tampilButon = document.createElement("button");
+			tampilButon.innerHTML = "Total Harga";
+			tampilButon.onclick = tampilTotalHarga;
+			document.getElementById("output").appendChild(tampilButon);
+
             // periksa apakah ada input yang kosong
             if (namaPembeli === "" || makanan === "" || hargaMakanan === 0 || minuman === "" || hargaMinuman === 0 || uangTunai === 0) {
             alert("Harap isi semua input sebelum menghitung belanja.");
@@ -75,7 +82,7 @@
             }
 
 			// Hitung total harga
-			var totalHarga = hargaMakanan * jumlahMakanan + hargaMinuman * hargaMinuman;
+			var totalHarga = hargaMakanan * jumlahMakanan + hargaMinuman * jumlahMinuman;
 
 			// Hitung kembalian
 			var kembalian = uangTunai - totalHarga;
@@ -93,6 +100,19 @@
     		// Menampilkan pesan terima kasih
 	        alert(`Terima kasih sudah berbelanja!`);
         }
+		function tampilTotalHarga(){
+			//ambil input
+			var hargaMakanan = parseInt(document.getElementById("harga-makanan").value);
+            var jumlahMakanan = parseInt(document.getElementById("jumlah-makanan").value);
+			var hargaMinuman = parseInt(document.getElementById("harga-minuman").value);
+            var jumlahMinuman = parseInt(document.getElementById("jumlah-minuman").value);
+
+			//Hitung total harga
+			var totalHarga = hargaMakanan * jumlahMakanan + hargaMinuman * jumlahMinuman;
+
+			//menampilkan total harga
+			document.getElementById("total-harga").innerHTML ="Total Harga: "+ totalHarga + "Rupiah"
+		}
         </script>       
     </body>
 </html>
