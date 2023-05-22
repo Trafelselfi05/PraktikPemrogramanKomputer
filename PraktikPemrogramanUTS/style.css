@@ -151,3 +151,10 @@ font-size: 14px;
     grid-gap: 40px;
     margin-top: 50px;
 }
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
