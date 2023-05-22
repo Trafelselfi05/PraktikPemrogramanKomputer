@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Design</p>
+                <h1>Hi, I'm <span>Selfi</span> <br>From Indonesia</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/about.jpg" alt="about image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>"Design that inspires, engages, and influences the user experience."<br>
+                        "User-driven innovation that transcends the boundaries of conventional design."<br>
+                        "It combines a captivating aesthetic with intuitive functionality."<br>
+                        "Creating an engaging and emotionally evocative interface."<br>
+                        "Focusing on user satisfaction as the main foothold in every design."<br>
+                        "Dive into the needs and desires of users to create effective solutions."<br>
+                        "Telling stories through design that enlightens and facilitates interaction."<br>
+                        "Understand the user journey and optimize every touchpoint."<br>
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022</span><br>Team lead at StarApp</li>
+                            <li><span>2023</span><br>Designing E-commerce Website for Local Fashion Brand</li>
+                            <li><span>2023</span><br>Fitness Mobile Application User Interface Design</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019</span><br>UI/UX design training on online shopping stores</li>
+                            <li><span>2023</span><br>D4 Software Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------Services-------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>As a web designer, I have expertise in creating attractive and alluring visual displays for web pages. I focus on creating an optimal user experience by paying attention to the design aspects, functionality, and needs of the target audience.</p>
+                    <a href="#">Learn More</a>"
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>As a UI/UX designer, I have expertise in creating engaging and effective user experiences through intuitive and attractive designs. My main focus is to understand user needs and create an interface that is easy to use, functional, and fun.</p>
+                    <a href="#">Learn More</a>"
+                </div>
+                <div>
+                    <h2>App Development</h2>
+                    <p>As a designer in app development, I have expertise in creating attractive, functional, and intuitive user interfaces. My main focus is to ensure that users have an optimal experience when using the apps I design.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+</body>
+</html>
