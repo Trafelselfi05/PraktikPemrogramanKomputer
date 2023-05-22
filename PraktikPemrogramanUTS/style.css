@@ -198,6 +198,7 @@ transform: translateY(-10px);
     width: 100%;
     border-radius: 10px;
     display: block;
+    transition: 0.5s;
 }
 .layer {
     position: absolute;
@@ -211,8 +212,34 @@ transform: translateY(-10px);
     text-align: center;
     transform: translateY(100%);
     transition: transform 0.3s ease;
+    font-size: 14px;
 }
 
 .work:hover .layer {
     transform: translateY(0);
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 0px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius : 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display:inline-block;
+}
+.work :hover img {
+transform: scale(1..1);
+}
+.work :hover .layer {
+    height: 100%;
 }
